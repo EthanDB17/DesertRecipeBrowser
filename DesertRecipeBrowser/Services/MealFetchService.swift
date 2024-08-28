@@ -21,7 +21,7 @@ protocol AnyMealFetchService {
     func fetchMealDetails(id: String) async throws -> MealDetails
 }
 
-struct MealFetchService: AnyMealFetchService {
+actor MealFetchService: AnyMealFetchService {
     
     // MARK: - Properties -
     

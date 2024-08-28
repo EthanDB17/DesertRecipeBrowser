@@ -16,7 +16,7 @@ protocol AnyAPIExecutor {
     func executeRequest(endpoint: AnyAPIEndpoint) async throws -> Data
 }
 
-struct APIExecutor: AnyAPIExecutor {
+actor APIExecutor: AnyAPIExecutor {
     
     /// Performs an async API call for the provided endpoint
     /// - parameter endpoint: the endpoint being called
