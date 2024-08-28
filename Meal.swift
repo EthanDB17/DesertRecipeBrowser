@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Lightweight object to hold the basic recipe details
 struct Meal: Codable {
     let id: String
     let meal: String

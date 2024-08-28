@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Codable object to consume the meal detail properties from the API
 struct APIMealDetails: Codable {
     let idMeal: String
     let strMeal: String

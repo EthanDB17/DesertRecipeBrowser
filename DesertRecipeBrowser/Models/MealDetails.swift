@@ -7,6 +7,10 @@
 
 import Foundation
 
+/// Internal meal details object
+///
+/// Certain fields of the API model were renamed or consolidated
+/// for easier consumption in the application
 struct MealDetails {
     let id: String
     let mealName: String
@@ -18,6 +22,8 @@ struct MealDetails {
     let source: String?
     let imageSource: String?
     
+    /// Dictionary map of non-empty ingredient and measurement values
+    /// from the API model
     let ingredientMap: [String:String]
     
     init(apiMeal: APIMealDetails) {

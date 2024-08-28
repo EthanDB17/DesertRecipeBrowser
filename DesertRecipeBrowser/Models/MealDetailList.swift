@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Container meant to consume the list of meal details from the API
 struct MealDetailList: Codable {
     let meals: [APIMealDetails]
 }

@@ -19,6 +19,14 @@
 		37535F432C7E62AF0060F2B2 /* APIMealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F422C7E62AF0060F2B2 /* APIMealDetails.swift */; };
 		37535F452C7E63BC0060F2B2 /* MealDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F442C7E63BC0060F2B2 /* MealDetailList.swift */; };
 		37535F472C7E644E0060F2B2 /* MealDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F462C7E644E0060F2B2 /* MealDetails.swift */; };
+		37535F4A2C7ECBB20060F2B2 /* HttpMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F492C7ECBB20060F2B2 /* HttpMethodType.swift */; };
+		37535F4C2C7ECE0B0060F2B2 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F4B2C7ECE0B0060F2B2 /* APIEndpoint.swift */; };
+		37535F4E2C7ECF6C0060F2B2 /* MealEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F4D2C7ECF6C0060F2B2 /* MealEndpoint.swift */; };
+		37535F502C7ED1360060F2B2 /* EndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F4F2C7ED1360060F2B2 /* EndpointProvider.swift */; };
+		37535F542C7ED61F0060F2B2 /* APIExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F532C7ED61F0060F2B2 /* APIExecutor.swift */; };
+		37535F572C7ED8180060F2B2 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F562C7ED8180060F2B2 /* AppError.swift */; };
+		37535F5A2C7F79580060F2B2 /* JsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F592C7F79580060F2B2 /* JsonDecoder.swift */; };
+		37535F5D2C7F7EF30060F2B2 /* MealFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F5C2C7F7EF30060F2B2 /* MealFetchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +62,14 @@
 		37535F422C7E62AF0060F2B2 /* APIMealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMealDetails.swift; sourceTree = "<group>"; };
 		37535F442C7E63BC0060F2B2 /* MealDetailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailList.swift; sourceTree = "<group>"; };
 		37535F462C7E644E0060F2B2 /* MealDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetails.swift; sourceTree = "<group>"; };
+		37535F492C7ECBB20060F2B2 /* HttpMethodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethodType.swift; sourceTree = "<group>"; };
+		37535F4B2C7ECE0B0060F2B2 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		37535F4D2C7ECF6C0060F2B2 /* MealEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealEndpoint.swift; sourceTree = "<group>"; };
+		37535F4F2C7ED1360060F2B2 /* EndpointProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProvider.swift; sourceTree = "<group>"; };
+		37535F532C7ED61F0060F2B2 /* APIExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIExecutor.swift; sourceTree = "<group>"; };
+		37535F562C7ED8180060F2B2 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		37535F592C7F79580060F2B2 /* JsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecoder.swift; sourceTree = "<group>"; };
+		37535F5C2C7F7EF30060F2B2 /* MealFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFetchService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +120,10 @@
 		37535F132C7E5E230060F2B2 /* DesertRecipeBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				37535F5B2C7F7ED80060F2B2 /* Services */,
 				37F6F3D82C7E60F000169A32 /* Models */,
+				37535F482C7ECADB0060F2B2 /* API */,
+				37535F552C7ED6F80060F2B2 /* Errors */,
 				37535F142C7E5E230060F2B2 /* DesertRecipeBrowserApp.swift */,
 				37535F162C7E5E230060F2B2 /* ContentView.swift */,
 				37535F182C7E5E240060F2B2 /* Assets.xcassets */,
@@ -136,6 +155,59 @@
 				37535F312C7E5E240060F2B2 /* DesertRecipeBrowserUITestsLaunchTests.swift */,
 			);
 			path = DesertRecipeBrowserUITests;
+			sourceTree = "<group>";
+		};
+		37535F482C7ECADB0060F2B2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				37535F512C7ED5A10060F2B2 /* Endpoints */,
+				37535F522C7ED5BF0060F2B2 /* Execution */,
+				37535F582C7F79000060F2B2 /* Decoding */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		37535F512C7ED5A10060F2B2 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				37535F492C7ECBB20060F2B2 /* HttpMethodType.swift */,
+				37535F4B2C7ECE0B0060F2B2 /* APIEndpoint.swift */,
+				37535F4D2C7ECF6C0060F2B2 /* MealEndpoint.swift */,
+				37535F4F2C7ED1360060F2B2 /* EndpointProvider.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		37535F522C7ED5BF0060F2B2 /* Execution */ = {
+			isa = PBXGroup;
+			children = (
+				37535F532C7ED61F0060F2B2 /* APIExecutor.swift */,
+			);
+			path = Execution;
+			sourceTree = "<group>";
+		};
+		37535F552C7ED6F80060F2B2 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				37535F562C7ED8180060F2B2 /* AppError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		37535F582C7F79000060F2B2 /* Decoding */ = {
+			isa = PBXGroup;
+			children = (
+				37535F592C7F79580060F2B2 /* JsonDecoder.swift */,
+			);
+			path = Decoding;
+			sourceTree = "<group>";
+		};
+		37535F5B2C7F7ED80060F2B2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				37535F5C2C7F7EF30060F2B2 /* MealFetchService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		37F6F3D82C7E60F000169A32 /* Models */ = {
@@ -280,10 +352,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37535F5A2C7F79580060F2B2 /* JsonDecoder.swift in Sources */,
 				37535F412C7E61CB0060F2B2 /* MealList.swift in Sources */,
+				37535F542C7ED61F0060F2B2 /* APIExecutor.swift in Sources */,
+				37535F4C2C7ECE0B0060F2B2 /* APIEndpoint.swift in Sources */,
 				37535F452C7E63BC0060F2B2 /* MealDetailList.swift in Sources */,
+				37535F572C7ED8180060F2B2 /* AppError.swift in Sources */,
+				37535F4E2C7ECF6C0060F2B2 /* MealEndpoint.swift in Sources */,
+				37535F4A2C7ECBB20060F2B2 /* HttpMethodType.swift in Sources */,
+				37535F5D2C7F7EF30060F2B2 /* MealFetchService.swift in Sources */,
 				37535F172C7E5E230060F2B2 /* ContentView.swift in Sources */,
 				37535F472C7E644E0060F2B2 /* MealDetails.swift in Sources */,
+				37535F502C7ED1360060F2B2 /* EndpointProvider.swift in Sources */,
 				37535F3F2C7E61320060F2B2 /* Meal.swift in Sources */,
 				37535F152C7E5E230060F2B2 /* DesertRecipeBrowserApp.swift in Sources */,
 				37535F432C7E62AF0060F2B2 /* APIMealDetails.swift in Sources */,
