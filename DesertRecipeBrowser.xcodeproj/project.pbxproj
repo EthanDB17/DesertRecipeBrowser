@@ -49,6 +49,7 @@
 		37535F9A2C80EA170060F2B2 /* MealOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F992C80EA170060F2B2 /* MealOverviewViewModel.swift */; };
 		37535F9C2C8103500060F2B2 /* MealIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F9B2C8103500060F2B2 /* MealIngredientsViewModel.swift */; };
 		37535F9E2C811F5C0060F2B2 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F9D2C811F5C0060F2B2 /* Ingredient.swift */; };
+		37535FA02C8126CC0060F2B2 /* MealInstructionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F9F2C8126CC0060F2B2 /* MealInstructionsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		37535F992C80EA170060F2B2 /* MealOverviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealOverviewViewModel.swift; sourceTree = "<group>"; };
 		37535F9B2C8103500060F2B2 /* MealIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIngredientsViewModel.swift; sourceTree = "<group>"; };
 		37535F9D2C811F5C0060F2B2 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		37535F9F2C8126CC0060F2B2 /* MealInstructionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInstructionsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				37535F952C80E2D00060F2B2 /* MealInstructionsView.swift */,
+				37535F9F2C8126CC0060F2B2 /* MealInstructionsViewModel.swift */,
 			);
 			path = MealInstructions;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				37535F4C2C7ECE0B0060F2B2 /* APIEndpoint.swift in Sources */,
 				37535F8D2C801AA60060F2B2 /* ViewFactory.swift in Sources */,
 				37535F452C7E63BC0060F2B2 /* MealDetailList.swift in Sources */,
+				37535FA02C8126CC0060F2B2 /* MealInstructionsViewModel.swift in Sources */,
 				37535F932C80E2AA0060F2B2 /* MealIngredientsView.swift in Sources */,
 				37535F572C7ED8180060F2B2 /* AppError.swift in Sources */,
 				37535F9C2C8103500060F2B2 /* MealIngredientsViewModel.swift in Sources */,

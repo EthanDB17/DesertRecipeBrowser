@@ -56,7 +56,8 @@ struct MealDetailsView: View {
                         .padding(8)
                     
                 case 2:
-                    MealInstructionsView()
+                    MealInstructionsView(viewModel: MealInstructionsViewModel(instructions: mealDetails.instructions))
+                        .padding(8)
                     
                 default:
                     // Shouldn't get this
