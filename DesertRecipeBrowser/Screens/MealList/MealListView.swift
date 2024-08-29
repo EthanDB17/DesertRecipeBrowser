@@ -9,8 +9,15 @@ import SwiftUI
 
 @MainActor
 struct MealListView: View {
-    @State var viewModel: MealListViewModel
     @Environment(\.colorScheme) var colorScheme
+    @State var viewModel: MealListViewModel
+    @State var router = Router()
+    
+    init(viewModel: MealListViewModel) {
+        self.viewModel = viewModel
+        
+        self.specifyNavigationTitleFonts()
+    }
     
     var body: some View {
         ZStack {
@@ -35,18 +42,26 @@ struct MealListView: View {
     }
     
     @ViewBuilder private func mealListView() -> some View {
-
-        List {
-            ForEach(viewModel.mealList, id: \.id) { meal in
-                MealCardView(meal: meal)
-                    .listRowSeparator(.hidden)
-                    .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
-                    .listRowBackground(Color.clear)
-                
+        NavigationStack(path: $router.navPath) {
+            List {
+                ForEach(viewModel.mealList, id: \.id) { meal in
+                    MealCardView(meal: meal)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
+                        .listRowBackground(Color.clear)
+                        .onTapGesture {
+                            router.navigate(to: Route.mealDetails(mealId: meal.id))
+                        }
+                }
             }
+            .listStyle(.plain)
+            .background(.clear)
+            .navigationDestination(for: Route.self) { route in
+                router.viewForRoute(route)
+            }
+            .navigationTitle("Dessert List")
         }
-        .listStyle(.plain)
-        .background(.clear)
+        .environment(router)
     }
     
     @ViewBuilder private func loadingView() -> some View {
@@ -74,6 +89,28 @@ struct MealListView: View {
     
     @ViewBuilder private func noMealsView() -> some View {
         ContentUnavailableView("Unable to Find Meals", systemImage: "book.pages")
+    }
+    
+    /// Set navigation title fonts
+    ///
+    /// Make sure the navigation title uses the same font as the rest of the
+    /// app when it is large and after scrolling. Use scaled fonts so the size
+    /// of the font will increase and decrease dynamically to support the
+    /// various accessibility text sizes
+    private func specifyNavigationTitleFonts() {
+        let design = UIFontDescriptor.SystemDesign.serif
+        let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .largeTitle).withDesign(design)
+        let smallDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body).withDesign(design)
+        if let descriptor {
+            let font = UIFont(descriptor: descriptor, size: 48)
+            let scaledFont = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: font)
+            UINavigationBar.appearance().largeTitleTextAttributes = [.font: scaledFont]
+        }
+        if let smallDescriptor {
+            let font = UIFont(descriptor: smallDescriptor, size: 17)
+            let scaledFont = UIFontMetrics(forTextStyle: .body).scaledFont(for: font)
+            UINavigationBar.appearance().titleTextAttributes = [.font: scaledFont]
+        }
     }
 }
 

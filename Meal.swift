@@ -8,7 +8,7 @@
 import Foundation
 
 /// Lightweight object to hold the basic recipe details
-struct Meal: Codable {
+struct Meal: Codable, Hashable {
     let id: String
     let meal: String
     let thumb: String

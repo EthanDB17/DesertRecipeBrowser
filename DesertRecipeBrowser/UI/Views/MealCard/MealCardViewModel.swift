@@ -11,7 +11,7 @@ import Observation
 @MainActor
 @Observable
 /// Manages the image data for the MealCardView
-class MealCardViewModel {
+final class MealCardViewModel {
     
     // MARK: - Properties -
     
