@@ -58,14 +58,14 @@
 			containerPortal = 37535F092C7E5E230060F2B2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 37535F102C7E5E230060F2B2;
-			remoteInfo = DesertRecipeBrowser;
+			remoteInfo = DessertRecipeBrowser;
 		};
 		37535F2C2C7E5E240060F2B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37535F092C7E5E230060F2B2 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 37535F102C7E5E230060F2B2;
-			remoteInfo = DesertRecipeBrowser;
+			remoteInfo = DessertRecipeBrowser;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -411,7 +411,7 @@
 			dependencies = (
 			);
 			name = DessertRecipeBrowser;
-			productName = DesertRecipeBrowser;
+			productName = DessertRecipeBrowser;
 			productReference = 37535F112C7E5E230060F2B2 /* DessertRecipeBrowser.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -429,7 +429,7 @@
 				37535F232C7E5E240060F2B2 /* PBXTargetDependency */,
 			);
 			name = DessertRecipeBrowserTests;
-			productName = DesertRecipeBrowserTests;
+			productName = DessertRecipeBrowserTests;
 			productReference = 37535F212C7E5E240060F2B2 /* DessertRecipeBrowserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -447,7 +447,7 @@
 				37535F2D2C7E5E240060F2B2 /* PBXTargetDependency */,
 			);
 			name = DessertRecipeBrowserUITests;
-			productName = DesertRecipeBrowserUITests;
+			productName = DessertRecipeBrowserUITests;
 			productReference = 37535F2B2C7E5E240060F2B2 /* DessertRecipeBrowserUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -725,7 +725,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DesertRecipeBrowser/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DessertRecipeBrowser/Preview Content\"";
 				DEVELOPMENT_TEAM = MWM578QRE5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -739,7 +739,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DesertRecipeBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DessertRecipeBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -754,7 +754,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DesertRecipeBrowser/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"DessertRecipeBrowser/Preview Content\"";
 				DEVELOPMENT_TEAM = MWM578QRE5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -768,7 +768,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DesertRecipeBrowser;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DessertRecipeBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -786,7 +786,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DesertRecipeBrowserTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DessertRecipeBrowserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -805,7 +805,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DesertRecipeBrowserTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DessertRecipeBrowserTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -822,12 +822,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DesertRecipeBrowserUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DessertRecipeBrowserUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DesertRecipeBrowser;
+				TEST_TARGET_NAME = DessertRecipeBrowser;
 			};
 			name = Debug;
 		};
@@ -839,12 +839,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DesertRecipeBrowserUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eborrowman.DessertRecipeBrowserUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DesertRecipeBrowser;
+				TEST_TARGET_NAME = DessertRecipeBrowser;
 			};
 			name = Release;
 		};
