@@ -61,6 +61,4 @@ struct APIMealDetails: Codable {
     
     let strSource: String?
     let strImageSource: String?
-    let strCreativeCommonsConfirmed: String?
-    let dateModified: String?
 }

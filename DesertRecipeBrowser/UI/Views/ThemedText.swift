@@ -9,12 +9,14 @@ import SwiftUI
 
 /// Standard text element with themed font applied
 struct ThemedText: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     let text: String
     let fontStyle: Font.TextStyle
     let fontWeight: Font.Weight
-    let fontColor: Color
+    let fontColor: Color?
     
-    init(_ text: String, fontStyle: Font.TextStyle = .body, fontWeight: Font.Weight = .regular, fontColor: Color = Theme.current.primaryFontColor) {
+    init(_ text: String, fontStyle: Font.TextStyle = .body, fontWeight: Font.Weight = .regular, fontColor: Color? = nil) {
         self.text = text
         self.fontStyle = fontStyle
         self.fontWeight = fontWeight
@@ -25,7 +27,8 @@ struct ThemedText: View {
         Text(text)
             .font(Theme.current.primaryFont(style: fontStyle))
             .fontWeight(fontWeight)
-            .foregroundStyle(fontColor)
+            .foregroundStyle(fontColor ?? Theme.current.primaryFontColor)
+            .preferredColorScheme(colorScheme)
     }
 }
 

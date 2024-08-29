@@ -14,7 +14,7 @@ struct ViewFactory {
     
     /// Creates the meal details screen
     /// - parameter mealId: the id of the meal being fetched
-    @ViewBuilder func mealDetailsView(mealId: String) -> some View {
-        MealDetailsView(viewModel: MealDetailsViewModel(mealId: mealId))
+    @ViewBuilder func mealDetailsView(meal: Meal) -> some View {
+        MealDetailsView(viewModel: MealDetailsViewModel(meal: meal))
     }
 }

@@ -9,5 +9,5 @@ import Foundation
 
 /// All possible navigation routes
 enum Route: Hashable {
-    case mealDetails(mealId: String)
+    case mealDetails(meal: Meal)
 }

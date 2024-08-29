@@ -120,4 +120,17 @@ struct MealDetails {
 
         self.ingredientMap = map
     }
+    
+    init(id: String, mealName: String, drinkAlternate: String?, area: String, instructions: String, thumbImage: String?, youtube: String?, source: String?, imageSource: String?, ingredientMap: [String:String]) {
+        self.id = id
+        self.mealName = mealName
+        self.drinkAlternate = drinkAlternate
+        self.area = area
+        self.instructions = instructions
+        self.thumbImage = thumbImage
+        self.youtTube = youtube
+        self.source = source
+        self.imageSource = imageSource
+        self.ingredientMap = ingredientMap
+    }
 }

@@ -33,8 +33,8 @@ final class Router {
     /// - parameter route: the destination the user is being routed to
     @ViewBuilder func viewForRoute(_ route: Route) -> some View {
         switch route {
-        case .mealDetails(let mealId):
-            factory.mealDetailsView(mealId: mealId)
+        case .mealDetails(let meal):
+            factory.mealDetailsView(meal: meal)
         }
     }
 }

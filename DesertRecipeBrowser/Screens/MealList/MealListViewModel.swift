@@ -26,8 +26,13 @@ final class MealListViewModel {
     
     let mealFetchService: AnyMealFetchService
     
-    var mealList: [Meal] = []
-    var state: State = .loading
+    var mealList: [Meal] = [.init(id: "53049", meal: "Apam Balik", thumb: "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg"),
+                            .init(id: "52893", meal: "Apple & Blackberry Crumble", thumb: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg"),
+                            .init(id: "52855", meal: "Banana Pancakes", thumb: "https://www.themealdb.com/images/media/meals/sywswr1511383814.jpg")]
+    var state: State = .loaded
+    
+//    var mealList: [Meal] = []
+//    var state: State = .loading
     
     init(mealFetchService: AnyMealFetchService = MealFetchService()) {
         self.mealFetchService = mealFetchService
@@ -36,7 +41,7 @@ final class MealListViewModel {
         URLCache.shared.memoryCapacity = 20_000_000 // ~20 MB memory space
         URLCache.shared.diskCapacity = 1_000_000_000 // ~1GB disk cache space
         
-        self.fetchMealList()
+//        self.fetchMealList()
     }
     
     // MARK: - Data Management -
@@ -57,10 +62,12 @@ final class MealListViewModel {
                     self.state = .loaded
                 }
             } catch {
-                if let appError = error as? AppError {
-                    self.state = .error(message: appError.errorMessage)
-                } else {
-                    self.state = .error(message: error.localizedDescription)
+                await MainActor.run {
+                    if let appError = error as? AppError {
+                        self.state = .error(message: appError.errorMessage)
+                    } else {
+                        self.state = .error(message: error.localizedDescription)
+                    }
                 }
             }
         }

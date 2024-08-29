@@ -16,7 +16,7 @@ struct MealListView: View {
     init(viewModel: MealListViewModel) {
         self.viewModel = viewModel
         
-        self.specifyNavigationTitleFonts()
+        self.specifyUIElementFonts()
     }
     
     var body: some View {
@@ -38,6 +38,7 @@ struct MealListView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Theme.current.primaryBackgroundColor)
+        .background(Color.blue)
         .preferredColorScheme(colorScheme)
     }
     
@@ -50,12 +51,12 @@ struct MealListView: View {
                         .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
                         .listRowBackground(Color.clear)
                         .onTapGesture {
-                            router.navigate(to: Route.mealDetails(mealId: meal.id))
+                            router.navigate(to: Route.mealDetails(meal: meal))
                         }
                 }
             }
             .listStyle(.plain)
-            .background(.clear)
+            .background(Theme.current.primaryBackgroundColor)
             .navigationDestination(for: Route.self) { route in
                 router.viewForRoute(route)
             }
@@ -74,16 +75,8 @@ struct MealListView: View {
     }
     
     @ViewBuilder private func errorView(errorMessage: String) -> some View {
-        Button(action: {
+        RetryableErrorView(title: "An error occurred fetching the list of meals: ", message: errorMessage, action: {
             viewModel.fetchMealList()
-        }, label: {
-            VStack {
-                ThemedText("An error occurred fetching the list of meals: ", fontStyle: .title3)
-                ThemedText(errorMessage, fontStyle: .subheadline)
-                ThemedText("Tap the screen to try again.", fontStyle: .subheadline)
-                    .padding(.top, 16)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
         })
     }
     
@@ -97,19 +90,25 @@ struct MealListView: View {
     /// app when it is large and after scrolling. Use scaled fonts so the size
     /// of the font will increase and decrease dynamically to support the
     /// various accessibility text sizes
-    private func specifyNavigationTitleFonts() {
+    private func specifyUIElementFonts() {
+        // large title fonts
         let design = UIFontDescriptor.SystemDesign.serif
         let descriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .largeTitle).withDesign(design)
         let smallDescriptor = UIFontDescriptor.preferredFontDescriptor(withTextStyle: .body).withDesign(design)
         if let descriptor {
             let font = UIFont(descriptor: descriptor, size: 48)
             let scaledFont = UIFontMetrics(forTextStyle: .largeTitle).scaledFont(for: font)
+            // set font for large title navigation bar
             UINavigationBar.appearance().largeTitleTextAttributes = [.font: scaledFont]
         }
+        // body fonts
         if let smallDescriptor {
             let font = UIFont(descriptor: smallDescriptor, size: 17)
             let scaledFont = UIFontMetrics(forTextStyle: .body).scaledFont(for: font)
+            // set font for standard nav title
             UINavigationBar.appearance().titleTextAttributes = [.font: scaledFont]
+            // set font for segmentd control
+            UISegmentedControl.appearance().setTitleTextAttributes([.font: scaledFont], for: .normal)
         }
     }
 }
