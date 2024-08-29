@@ -1,6 +1,6 @@
 //
 //  Meal.swift
-//  DesertRecipeBrowser
+//  DessertRecipeBrowser
 //
 //  Created by Ethan Borrowman on 8/27/24.
 //
