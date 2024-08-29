@@ -77,5 +77,5 @@ struct MealOverviewView: View {
 }
 
 #Preview {
-    MealOverviewView(viewModel: MealOverviewViewModel(mealDetails: MealDetails(id: "52893", mealName: "Apple & Blackberry Crumble", drinkAlternate: "Test", area: "British", instructions: "", thumbImage: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg", youtube: "https://www.youtube.com/watch?v=4vhcOwVBDO4", source: "https://www.bbcgoodfood.com/recipes/778642/apple-and-blackberry-crumble", imageSource: nil, ingredientMap: [:])))    
+    MealOverviewView(viewModel: MealOverviewViewModel(mealDetails: MealDetails(id: "52893", mealName: "Apple & Blackberry Crumble", drinkAlternate: "Test", area: "British", instructions: "", thumbImage: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg", youtube: "https://www.youtube.com/watch?v=4vhcOwVBDO4", source: "https://www.bbcgoodfood.com/recipes/778642/apple-and-blackberry-crumble", imageSource: nil, ingredients: [])))    
 }

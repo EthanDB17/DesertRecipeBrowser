@@ -52,7 +52,8 @@ struct MealDetailsView: View {
                         .padding(8)
                     
                 case 1:
-                    MealIngredientsView()
+                    MealIngredientsView(viewModel: MealIngredientsViewModel(ingredients: mealDetails.ingredients))
+                        .padding(8)
                     
                 case 2:
                     MealInstructionsView()
@@ -60,6 +61,7 @@ struct MealDetailsView: View {
                 default:
                     // Shouldn't get this
                     MealOverviewView(viewModel: MealOverviewViewModel(mealDetails: mealDetails))
+                        .padding(8)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)

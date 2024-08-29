@@ -11,7 +11,7 @@ import Observation
 @MainActor
 @Observable
 /// Manages view data for the MealOverviewView
-class MealOverviewViewModel {
+final class MealOverviewViewModel {
     
     // MARK: - Properties - 
     
