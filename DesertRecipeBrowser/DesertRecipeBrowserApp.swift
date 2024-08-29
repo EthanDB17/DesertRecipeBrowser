@@ -11,7 +11,7 @@ import SwiftUI
 struct DesertRecipeBrowserApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MealListView(viewModel: MealListViewModel())
         }
     }
 }
