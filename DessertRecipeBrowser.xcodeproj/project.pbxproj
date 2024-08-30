@@ -50,6 +50,9 @@
 		37535F9C2C8103500060F2B2 /* MealIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F9B2C8103500060F2B2 /* MealIngredientsViewModel.swift */; };
 		37535F9E2C811F5C0060F2B2 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F9D2C811F5C0060F2B2 /* Ingredient.swift */; };
 		37535FA02C8126CC0060F2B2 /* MealInstructionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535F9F2C8126CC0060F2B2 /* MealInstructionsViewModel.swift */; };
+		37535FA82C81796D0060F2B2 /* MealFetchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FA72C81796D0060F2B2 /* MealFetchServiceMock.swift */; };
+		37535FAA2C8181C90060F2B2 /* MealListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FA92C8181C90060F2B2 /* MealListViewModelTests.swift */; };
+		37535FAC2C8188870060F2B2 /* MealDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FAB2C8188870060F2B2 /* MealDetailsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +119,9 @@
 		37535F9B2C8103500060F2B2 /* MealIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealIngredientsViewModel.swift; sourceTree = "<group>"; };
 		37535F9D2C811F5C0060F2B2 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		37535F9F2C8126CC0060F2B2 /* MealInstructionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInstructionsViewModel.swift; sourceTree = "<group>"; };
+		37535FA72C81796D0060F2B2 /* MealFetchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFetchServiceMock.swift; sourceTree = "<group>"; };
+		37535FA92C8181C90060F2B2 /* MealListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModelTests.swift; sourceTree = "<group>"; };
+		37535FAB2C8188870060F2B2 /* MealDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +198,8 @@
 		37535F242C7E5E240060F2B2 /* DessertRecipeBrowserTests */ = {
 			isa = PBXGroup;
 			children = (
+				37916BC82C8178F9003F26D7 /* Mocks */,
+				37535FA42C8171750060F2B2 /* Tests */,
 				37535F252C7E5E240060F2B2 /* DessertRecipeBrowserTests.swift */,
 			);
 			path = DessertRecipeBrowserTests;
@@ -380,6 +388,23 @@
 				37535F9F2C8126CC0060F2B2 /* MealInstructionsViewModel.swift */,
 			);
 			path = MealInstructions;
+			sourceTree = "<group>";
+		};
+		37535FA42C8171750060F2B2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				37535FA92C8181C90060F2B2 /* MealListViewModelTests.swift */,
+				37535FAB2C8188870060F2B2 /* MealDetailsViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		37916BC82C8178F9003F26D7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				37535FA72C81796D0060F2B2 /* MealFetchServiceMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		37F6F3D82C7E60F000169A32 /* Models */ = {
@@ -571,6 +596,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37535F262C7E5E240060F2B2 /* DessertRecipeBrowserTests.swift in Sources */,
+				37535FA82C81796D0060F2B2 /* MealFetchServiceMock.swift in Sources */,
+				37535FAC2C8188870060F2B2 /* MealDetailsViewModelTests.swift in Sources */,
+				37535FAA2C8181C90060F2B2 /* MealListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
