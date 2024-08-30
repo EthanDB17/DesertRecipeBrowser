@@ -53,6 +53,11 @@
 		37535FA82C81796D0060F2B2 /* MealFetchServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FA72C81796D0060F2B2 /* MealFetchServiceMock.swift */; };
 		37535FAA2C8181C90060F2B2 /* MealListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FA92C8181C90060F2B2 /* MealListViewModelTests.swift */; };
 		37535FAC2C8188870060F2B2 /* MealDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FAB2C8188870060F2B2 /* MealDetailsViewModelTests.swift */; };
+		37535FAE2C820DDA0060F2B2 /* CachingImageDownloaderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FAD2C820DDA0060F2B2 /* CachingImageDownloaderMock.swift */; };
+		37535FB02C82108E0060F2B2 /* MealOverviewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FAF2C82108E0060F2B2 /* MealOverviewViewModelTests.swift */; };
+		37535FB22C8213ED0060F2B2 /* MealCardViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FB12C8213ED0060F2B2 /* MealCardViewModelTests.swift */; };
+		37535FB42C82151A0060F2B2 /* APIExecutorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FB32C82151A0060F2B2 /* APIExecutorMock.swift */; };
+		37535FB62C8218D80060F2B2 /* MealFetchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37535FB52C8218D80060F2B2 /* MealFetchServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +127,11 @@
 		37535FA72C81796D0060F2B2 /* MealFetchServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFetchServiceMock.swift; sourceTree = "<group>"; };
 		37535FA92C8181C90060F2B2 /* MealListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListViewModelTests.swift; sourceTree = "<group>"; };
 		37535FAB2C8188870060F2B2 /* MealDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		37535FAD2C820DDA0060F2B2 /* CachingImageDownloaderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingImageDownloaderMock.swift; sourceTree = "<group>"; };
+		37535FAF2C82108E0060F2B2 /* MealOverviewViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealOverviewViewModelTests.swift; sourceTree = "<group>"; };
+		37535FB12C8213ED0060F2B2 /* MealCardViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCardViewModelTests.swift; sourceTree = "<group>"; };
+		37535FB32C82151A0060F2B2 /* APIExecutorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIExecutorMock.swift; sourceTree = "<group>"; };
+		37535FB52C8218D80060F2B2 /* MealFetchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealFetchServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -395,6 +405,9 @@
 			children = (
 				37535FA92C8181C90060F2B2 /* MealListViewModelTests.swift */,
 				37535FAB2C8188870060F2B2 /* MealDetailsViewModelTests.swift */,
+				37535FAF2C82108E0060F2B2 /* MealOverviewViewModelTests.swift */,
+				37535FB12C8213ED0060F2B2 /* MealCardViewModelTests.swift */,
+				37535FB52C8218D80060F2B2 /* MealFetchServiceTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -403,6 +416,8 @@
 			isa = PBXGroup;
 			children = (
 				37535FA72C81796D0060F2B2 /* MealFetchServiceMock.swift */,
+				37535FAD2C820DDA0060F2B2 /* CachingImageDownloaderMock.swift */,
+				37535FB32C82151A0060F2B2 /* APIExecutorMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -595,6 +610,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37535FB22C8213ED0060F2B2 /* MealCardViewModelTests.swift in Sources */,
+				37535FB02C82108E0060F2B2 /* MealOverviewViewModelTests.swift in Sources */,
+				37535FAE2C820DDA0060F2B2 /* CachingImageDownloaderMock.swift in Sources */,
+				37535FB42C82151A0060F2B2 /* APIExecutorMock.swift in Sources */,
+				37535FB62C8218D80060F2B2 /* MealFetchServiceTests.swift in Sources */,
 				37535F262C7E5E240060F2B2 /* DessertRecipeBrowserTests.swift in Sources */,
 				37535FA82C81796D0060F2B2 /* MealFetchServiceMock.swift in Sources */,
 				37535FAC2C8188870060F2B2 /* MealDetailsViewModelTests.swift in Sources */,
