@@ -45,16 +45,22 @@ struct MealListView: View {
     @ViewBuilder private func mealListView() -> some View {
         NavigationStack(path: $router.navPath) {
             List {
-                ForEach(viewModel.mealList, id: \.id) { meal in
-                    MealCardView(meal: meal)
-                        .listRowSeparator(.hidden)
-                        .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
-                        .listRowBackground(Color.clear)
-                        .onTapGesture {
-                            router.navigate(to: Route.mealDetails(meal: meal))
-                        }
+                if !viewModel.searchText.isEmpty, viewModel.filteredResults.isEmpty {
+                    ContentUnavailableView.search
+                } else {
+                    ForEach(viewModel.filteredResults, id: \.id) { meal in
+                        MealCardView(meal: meal)
+                            .listRowSeparator(.hidden)
+                            .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 8, trailing: 8))
+                            .listRowBackground(Color.clear)
+                            .onTapGesture {
+                                router.navigate(to: Route.mealDetails(meal: meal))
+                            }
+                    }
                 }
+                
             }
+            .searchable(text: $viewModel.searchText, placement: .automatic, prompt: "Search Desserts...")
             .listStyle(.plain)
             .background(Theme.current.primaryBackgroundColor)
             .navigationDestination(for: Route.self) { route in

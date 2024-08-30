@@ -26,8 +26,17 @@ final class MealListViewModel {
     
     let mealFetchService: AnyMealFetchService
     
-    var mealList: [Meal] = []
+    @ObservationIgnored var mealList: [Meal] = []
     var state: State = .loading
+    var searchText: String = ""
+    
+    var filteredResults: [Meal] {
+        if self.searchText.isEmpty {
+            return self.mealList
+        } else {
+            return self.mealList.filter { $0.meal.lowercased().contains(self.searchText.lowercased()) }
+        }
+    }
     
     init(mealFetchService: AnyMealFetchService = MealFetchService()) {
         self.mealFetchService = mealFetchService
