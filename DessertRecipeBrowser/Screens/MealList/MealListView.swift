@@ -107,6 +107,8 @@ struct MealListView: View {
             let scaledFont = UIFontMetrics(forTextStyle: .body).scaledFont(for: font)
             // set font for standard nav title
             UINavigationBar.appearance().titleTextAttributes = [.font: scaledFont]
+            // set font for nav back button
+            UIBarButtonItem.appearance().setTitleTextAttributes([.font: scaledFont], for: .normal)
             // set font for segmentd control
             UISegmentedControl.appearance().setTitleTextAttributes([.font: scaledFont], for: .normal)
         }
