@@ -31,6 +31,10 @@ struct MealOverviewView: View {
                 }
             }
             
+            ThemedText(viewModel.mealDetails.mealName, fontStyle: .title)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .multilineTextAlignment(.leading)
+            
             keyValueLabel(title: "Area", value: viewModel.mealDetails.area)
             if let drinkAlternate = viewModel.mealDetails.drinkAlternate {
                 keyValueLabel(title: "Drink Alternate", value: drinkAlternate)

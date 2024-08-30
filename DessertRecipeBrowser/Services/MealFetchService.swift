@@ -49,7 +49,8 @@ actor MealFetchService: AnyMealFetchService {
         do {
             let data = try await apiExecutor.executeRequest(endpoint: endpoint)
             let mealList: MealList = try jsonDecoder.decodeData(data)
-            return mealList.meals
+            let sortedMeals = mealList.meals.sorted { $0.meal < $1.meal }
+            return sortedMeals
         } catch {
             throw error
         }
